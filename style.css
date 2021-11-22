@@ -1,0 +1,180 @@
+/*Importing google lato font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/*Setting global variable to set background color across all the HTML page  */
+:root {
+    --main-bg-color: #2874f0;
+}
+  
+header{
+    background-color: var(--main-bg-color);
+    font-family: 'Lato', sans-serif;
+}
+
+nav{
+    display: flex;  /*Making logo horizontal*/
+    position: relative;
+}
+
+.logo{
+    display: flex;/*Making logo as a flexbox so positioing it will be easier.*/
+    align-items: center; /*Vertically centering the logo*/
+}
+
+.logo img{
+    width: 160px;
+    padding:6px 25px 0 29px;
+}
+
+
+nav ul{
+    height: 9vh;
+    display: flex;
+    justify-content: flex-start; /*Keeping ul at the start of nav bar*/
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0 1rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    text-transform:capitalize;
+    transition: all 0.2s ;
+}
+
+nav ul li a:hover,
+nav ul li a:active{
+    opacity: 0.6;
+}
+
+/*Setting search div as flex box*/
+.search{
+    display: flex;
+    align-items: center;
+    margin: 0 1vw 0 3vw;
+    
+}
+ 
+/*Formatting text input */
+.search input{
+    width: 30vw;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 0px 10px 0 0px;
+}
+
+.btn{
+    padding: 0.2vw 1vw;
+    background-color: var(--main-bg-color);
+    color:white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn:hover,
+.btn:active{
+    opacity: 0.6;
+}
+
+#click{
+    display: none;
+}
+
+nav .menu-btn i{
+    color: white;
+    display: none;
+    cursor: pointer;
+    transition: hover 0.3s ease;
+}
+
+nav .menu-btn i:hover,
+nav .menu-btn i:active{
+    opacity: 0.6;
+}
+.container{
+    min-height: calc(100vh - 58px - 12vh); /*Setting min-height of container as 100vh - header height - footer height*/
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 20px auto;
+}
+
+.slider img{
+    width: 98vw;
+}
+
+.card{
+    width: 95vw;
+    margin: 10px auto;
+}
+
+.card-name{
+    font-family: 'Lato', sans-serif;
+    padding: 0 0 15px 0;
+}
+
+.card-name h2{
+    font-weight: 500;
+}
+
+.card-1{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    
+}
+
+/* .card-1 .card-item{
+    display: inline-flex; It will make flex container to flow horizontally
+    flex-direction: column; As we have changed flex-direction to column now to center horizontally we need to use align-items and not justify-content 
+    flex-wrap:wrap;
+    align-content: space-between;
+    width: 14vw; 
+    margin: 0 58px 0 0; 
+} */
+
+
+.card-item{
+    transition: all 0.3s;
+}
+
+.card-item:hover,
+.card-item:active{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.lines{
+    margin: 7px 0 0 0;
+    font-family: lato, sans-serif;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66.5px;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
